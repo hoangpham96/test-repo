@@ -3,7 +3,7 @@ name: Collaborative Workflow
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   update_html_and_readme:
@@ -30,6 +30,6 @@ jobs:
           git add .
           git commit -m "Workflow: Updated HTML and README for ${{ github.actor }}" || echo "No changes to commit"
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
-          git push origin main
+          git push origin master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
