@@ -20,7 +20,7 @@ jobs:
 
       # Step 3: Update README.md file
       - name: Update README.md
-        run: echo "### Updated by ${{ github.actor }} on $(date '+%Y-%m-%d %H:%M:%S') [Commit: $(git rev-parse --short HEAD)]" >> readme.md
+        run: echo "### Updated by ${{ github.actor }} on $(date '+%Y-%m-%d %H:%M:%S') [Commit $(git rev-parse --short HEAD)]" >> readme.md
 
       # Step 4 Commit Changes to index.html and README
       - name: Commit and Push Changes
